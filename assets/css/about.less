@@ -1,0 +1,53 @@
+#about {
+    height: 100%;
+    background-color: @bg-color-bottom;
+        
+    .about-container {
+        padding: 0 200px;
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 90px;
+
+
+        h2 {
+            font-size: 38px;
+            font-weight: bold;
+            color: @bg-color-purple;
+            font-family: @text-titles;
+        }
+
+        p {
+            margin-top: 18px;
+            font-size: 18px;
+            line-height: 26px;
+            color: @bg-color-purple;
+        }
+        
+        .about-me {
+            text-align: right;
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@media (min-width: 768px) and (max-width: 800px) {
+    #about {
+        .about-container {
+            padding:  0 60px;
+        }
+    }
+}
+
+@media (min-width: 390px) and (max-width:767px) {
+    #about {
+        .about-container {
+            padding:  0 30px;
+        }
+    }
+}
+

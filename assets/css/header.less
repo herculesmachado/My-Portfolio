@@ -1,0 +1,169 @@
+#header {
+    // ao acabar o projeto, colocar no deg 50
+    background: linear-gradient(45deg, @bg-color-purple 50%, @bg-color-green 50%);
+    height: 100vh;
+
+    .profile {
+        display: flex;
+        gap: 300px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .title {
+                font-size: 80px;line-height: 80px;
+                color: @bg-color-green;
+                font-family: @text-titles;
+
+            }
+
+            .paragraph {
+                margin-top: 10px;
+                width: 450px;
+                color: @bg-color-bottom;
+                font-size: 22px;
+            }
+        }
+
+        .model-img {
+            display: flex;
+            .photo-perfil {
+                width: 350px;
+                z-index: 999;
+                border-radius: 4px;
+    
+                // em caso de desistencia da cor black, mudar para cor purple
+                box-shadow: 
+                    1px 1px black,
+                    2px 2px black,
+                    3px 3px black,
+                    4px 4px black,
+                    5px 5px black,
+                    6px 6px black,
+                    7px 7px black,
+                    8px 8px black,
+                    9px 9px black,
+                    10px 10px black;
+    
+            }
+    
+            .photo-perfil:hover {
+                box-shadow: 
+                    -1px -1px black,
+                    -2px -2px black,
+                    -3px -3px black,
+                    -4px -4px black,
+                    -5px -5px black,
+                    -6px -6px black,
+                    -7px -7px black,
+                    -8px -8px black,
+                    -9px -9px black,
+                    -10px -10px black;
+    
+                    transition: all .3s;
+                }
+
+                .squad {
+                    border: 3px solid black;
+                    height: 361px;
+                    width: 336px;
+                    position: absolute;
+                    top: 8%;
+                    right: -4%;
+                }
+        }
+
+        
+
+    }
+
+    
+}
+
+
+// MEDIA QUERIES
+
+@media (min-width:768px) and (max-width: 800px){
+    #header {
+        background: linear-gradient(180deg, @bg-color-purple 50%, @bg-color-green 50%);
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            gap: 115px;
+            margin-top: 60px;
+
+            .text {
+                .title {
+                    text-align: center;
+
+                }
+                
+                .paragraph {
+                    margin-top: 20px;
+                }
+            }
+
+
+            .model-img {
+                
+                .squad {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 55%;
+                    right: 11%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 390px) and (max-width:767px) {
+    #header {
+        background: linear-gradient(180deg, @bg-color-purple 50%, @bg-color-green 50%);
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            gap: 115px;
+            margin-top: 60px;
+
+            .text {
+                text-align: center;
+                .title {
+                    font-size: 55px;
+                    line-height: 50px;
+                    
+                }
+                
+                .paragraph {
+                    margin: 20px auto;
+                    width: 330px;
+                }
+            }
+
+
+            .model-img {
+                .photo-perfil {
+                    width: 290px;
+                }
+                .squad {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 60%;
+                    right: 0%;
+                    width: 270px;
+                    height: 290px;
+                }
+            }
+        }
+    }
+}
